@@ -125,22 +125,22 @@ public class PanelLienzo extends JPanel {
  
 		// Reto 3 – Generación de estrella curva exacta (como en plano XY, sin coordenadas negativas)
 		g.setColor(Color.YELLOW);
-		int cx = 150; 
-		int cy = 150; 
+		int centro_x = 150; 
+		int centro_y = 150; 
 		int max = 100;
 
-		for (int i = 0; i <= max; i++) {
+		for (int cuenta = 0; cuenta <= max; cuenta++) {
 
-		    g.drawLine(cx, cy - max + i, cx + i, cy);
+		    g.drawLine(centro_x, centro_y - max + cuenta, centro_x + cuenta, centro_y);
 
 		 
-		    g.drawLine(cx, cy + max - i, cx + i, cy);
+		    g.drawLine(centro_x, centro_y + max - cuenta, centro_x + cuenta, centro_y);
 
 	
-		    g.drawLine(cx, cy + max - i, cx - i, cy);
+		    g.drawLine(centro_x, centro_y + max - cuenta, centro_x - cuenta, centro_y);
 
 		    
-		    g.drawLine(cx, cy - max + i, cx - i, cy);
+		    g.drawLine(centro_x, centro_y - max + cuenta, centro_x - cuenta, centro_y);
 		}
 
 
